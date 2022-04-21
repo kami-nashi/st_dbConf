@@ -15,6 +15,24 @@ class currencyUSD:
             return ("%0.2f" % float(amount))
 
 
+class stmq:
+    '''
+    Common functions for all things mq related
+    '''
+
+    def musicman():
+        configParser = conf.RawConfigParser()
+        configFilePath = r'/etc/skatetrax/settings.conf'
+        configParser.read(configFilePath)
+        musicmanSettings = {
+        'host': configParser.get('stmq', 'hostname'),
+        'user': configParser.get('stmq', 'username'),
+        'password': configParser.get('stmq', 'password'),
+        'queue': 'musicman'
+        }
+
+        return musicmanSettings
+
 def baseConfig():
     '''
     Setup basic things we need for flask, including where the config file is
