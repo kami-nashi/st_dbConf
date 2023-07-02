@@ -33,12 +33,13 @@ class stmq:
 
         return musicmanSettings
 
+
 def baseConfig():
     '''
     Setup basic things we need for flask, including where the config file is
 
-    Currently, all flask apps use the same appconfig and key so that authenication
-    can be shard across different flask based services.
+    Currently, all flask apps use the same appconfig and key so that 
+    authentication can be shard across different flask based services.
     '''
 
     configParser = conf.RawConfigParser()
